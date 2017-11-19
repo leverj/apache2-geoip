@@ -6,7 +6,7 @@ RUN apt-get update && \
 COPY geoip.conf /etc/apache2/mods-available/
 COPY 000-default.conf /etc/apache2/sites-enabled/
 COPY favicon.ico /var/www/html/
-RUN a2enmod proxy ssl proxy_http substitute headers rewrite geoip
+RUN a2enmod proxy ssl proxy_http substitute headers rewrite geoip remoteip
 
 
 EXPOSE 80 443
